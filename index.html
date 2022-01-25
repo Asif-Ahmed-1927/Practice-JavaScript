@@ -20,22 +20,62 @@
 
         var text= "bangladesh";
 
-        document.write("Number of character" + text.length)
+        document.write("Number of character " + text.length + "<br>")
 
         var text= prompt("Enter your name: ")
 
-        document.write("Number of character" + text.length)
+        document.write("Number of character " + text.length + "<br>")
 
         var text="asif"
         text= text.toUpperCase();
 
-        document.write(text.charAt(2));
-        document.write(text)
+        document.write(text.charAt(2) + "<br>");
+        document.write(text + "<br>")
 
         var text1= "Bangladesh";
         var text2= " is a beautiful country";
         var text= text1.concat(text2);
-        document.write(text);
+        document.write(text + "<br>");
+
+        var x = 6;
+        x *= 3;
+        console.log(x);
+
+        /*var num1= prompt("Enter first digit: ");
+        var num2= prompt("Enter second digit: ");
+
+        num1= parseInt(num1, 10);
+        num2= parseInt(num2, 10);
+
+        var sum,sub;
+
+        sum= num1 + num2;
+        document.write("Addition=" + sum + "<br>");
+        sub= num1 - num2;
+        document.write("subtration=" + sub);*/
+
+
+        var num1= prompt("Enter first digit: ");
+        var num2= prompt("Enter second digit: ");
+
+        num1= parseInt(num1, 10);
+        num2= parseInt(num2, 10);
+
+        var result;
+
+        result= num1 + num2;
+        document.write(num1 + "+" + num2 + "=" + result + "<br>");
+        result= num1 - num2;
+        document.write(num1 + "-" + num2 + "=" + result + "<br>");
+        result= num1 * num2;
+        document.write(num1 + "*" + num2 + "=" + result + "<br>");
+        result= num1 / num2;
+        document.write(num1 + "/" + num2 + "=" + result + "<br>");
+        result= num1 % num2;
+        document.write(num1 + "%" + num2 + "=" + result + "<br>");
+
+        
+
 
 
     </script>
