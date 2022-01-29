@@ -175,6 +175,39 @@ for(var i= 1; i<=100; i++){
     document.write(" " + i)
 }
 
+//function//
+
+function sqaure(){
+    var num= 5;
+    var result= num*num;
+    document.write("result: " + result + "<br>")
+}
+sqaure();
+
+//after prameter//
+
+function sqaure(num){
+    var result= num*num;
+    document.write("result: " + result+ "<br>")
+}
+
+sqaure(5);
+sqaure(7);
+sqaure(6);
+
+//array//
+
+var names= [];
+names[0]="Asif";
+names[1]="Sakib";
+names[2]="Sayed";
+names[3]="Mehedi";
+names[4]="Mukul";
+document.write(names.length)
+names.push("Anika")
+document.write(names)
+names.pop();
+document.write(names);
 
 
 
