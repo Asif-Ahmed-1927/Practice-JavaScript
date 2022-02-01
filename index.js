@@ -209,7 +209,33 @@ document.write(names)
 names.pop();
 document.write(names);
 
+//array loop//
 
+var num= new Array();
+
+for(var i= 0; i<5; i++){
+    num[i]= parseInt(prompt("Enter a number: "))
+}
+
+var sum=0;
+
+for(var i=0; i < 5; i++){
+    document.write(num[i]);4
+    sum= sum + num[i];
+}
+
+document.write("sum: " + sum)
+
+//shift//
+
+var names= ["Asif", "Anika" , "Asifa"]
+document.write(names);
+
+names.shift();
+document.write(names);
+
+names.unshift("sagor");
+document.write(names)
 
 
 
