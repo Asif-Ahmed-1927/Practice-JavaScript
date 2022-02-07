@@ -237,6 +237,24 @@ document.write(names);
 names.unshift("sagor");
 document.write(names)
 
+//1d array//
+
+function highestScore(scores){
+    let max= scores[0];
+    for(var x=1; x<scores.length; x++){
+        if (max<scores[x]){
+            max= scores[x];
+        }
+    }
+    return max;
+   
+
+}
+
+var scores= [21,28,1,88,15];
+var maxscores= highestScore(scores);
+document.write(maxscores);
+
 
 
  
