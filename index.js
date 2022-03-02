@@ -255,7 +255,30 @@ var scores= [21,28,1,88,15];
 var maxscores= highestScore(scores);
 document.write(maxscores);
 
+//cerate and use object//
 
+function student(name,age,cgpa,lang){
+    this.name=name;
+    this.age=age;
+    this.cgpa=cgpa;
+    this.lang=lang;
+
+    this.display = function(){
+        document.write(this.name);
+        document.write(this.age);
+        document.write(this.cgpa);
+        document.write(this.lang);
+    }
+
+}
+
+var student1 = new student("Asif",25,3.22,["Bangali","Hindi", "English"]);
+var student2 = new student("ksif",23,3.20,["Bangali","Hindi", "English"]);
+var student3 = new student("jsif",20,3.26,["Bangali","Hindi", "English"]);
+
+student1.display();
+student2.display();
+student3.display();
 
  
 
