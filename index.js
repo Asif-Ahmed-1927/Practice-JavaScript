@@ -280,7 +280,33 @@ student1.display();
 student2.display();
 student3.display();
 
+//guessing number//
+
+var numOfwon = 0;
+var numOflost= 0;
+for(var i=1; i<=5; i++){
+    var guessNumber= parseInt(prompt("Enter a number from 1 to 5"));
+
+    var randomNumber= Math.floor(Math.random()*5) + 1;
+    
+    if(guessNumber==randomNumber){
+        document.write("You have won");
+        numOfwon++;
+    }else{
+        document.write("You have lost. Random Number was" + randomNumber);
+        numOflost++;
+    } 
+}
+
+document.write("total no of won= " + numOfwon + "<br>");
+document.write("total no of lost= " + numOflost + "<br>");
+
+//Date//
+
+var date= new Date();
+document..write(date);
  
+
 
 
 
