@@ -301,11 +301,24 @@ for(var i=1; i<=5; i++){
 document.write("total no of won= " + numOfwon + "<br>");
 document.write("total no of lost= " + numOflost + "<br>");
 
-//Date//
 
-var date= new Date();
-document..write(date);
+//query method//
+
+document.querySelector("a").innerHTML = "new text";
+document.querySelector("li a").innerHTML = "new text";
+document.querySelector("div a").innerHTML = "new text";
+document.querySelector(".my-div a").innerHTML = "new text";
+
+//onclick method//
+var myvar= document.querySelector("#weid");
+function myMessege1(){
+
+    myvar.src= "images/we.jpg";
  
+}
+function myMessege2(){
+    myvar.src= "images/we2.jpg";
+}
 
 
 
