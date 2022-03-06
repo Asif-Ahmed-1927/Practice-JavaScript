@@ -320,6 +320,10 @@ function myMessege2(){
     myvar.src= "images/we2.jpg";
 }
 
+// find create add html element//
+
+
+
 
 
 
