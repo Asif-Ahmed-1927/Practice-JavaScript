@@ -322,7 +322,67 @@ function myMessege2(){
 
 // find create add html element//
 
+var heading3= document.createElement("h1");
+var text= document.createTextNode("This is heading 3");
 
+heading3.appendChild(text);
+
+var myDiv= document.getElementById("my-div3");
+myDiv.appendChild(heading3);
+
+var heading2= document.getElementsByTagName("h1")[1];
+myDiv.removeChild(heading2);
+
+var heading0= document.createElement("h1");
+var text0= document.createTextNode("This is heading 0");
+heading0.appendChild(text0);
+var heading1= document.getElementsByTagName("h1")[0];
+myDiv.insertBefore(heading0,heading1);
+
+//image slider//
+
+var photos= ["images/me.JPG", "images/me2.JPG","images/me3.JPG"];
+var imgTag= document.querySelector("img");
+
+var count= 0;
+
+function next() {
+    count++;
+    if(count >=photos.length){
+        count=1;
+        imgTag.src= photos[count];
+    }else{
+        imgTag.src= photos[count];
+
+    }
+   
+
+}
+
+function prev(){
+    count--; 
+
+    if(count < 0 ){
+        count=photos.length - 1;
+        imgTag.src= photos[count];
+    }else{
+        imgTag.src= photos[count];
+
+    }
+
+}
+
+//add remove css style//
+
+function addStyle() {
+    var myVar= document.querySelector("#para-Id");
+    myVar.classList.add("para-style");
+}
+
+function removeStyle() {
+    var myVar= document.querySelector("#para-Id");
+    myVar.classList.remove("para-style");
+}
 
 
 
