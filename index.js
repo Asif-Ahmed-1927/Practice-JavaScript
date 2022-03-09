@@ -384,6 +384,107 @@ function removeStyle() {
     myVar.classList.remove("para-style");
 }
 
+//eventlisenter//
+
+document.querySelectorAll("button").addEventListener("click", function(){
+    alert("Hello");
+});
+
+var myVar= document.querySelector("h1");
+
+myVar.addEventListener("click", function(){
+    alert("hi");
+});
+
+//////
+
+for(var i=0; i<3; i++){
+
+    document.querySelectorAll(".myButton")[i].addEventListener("click", function () {
+        var text= this.innerHTML;
+        document.querySelector("h5").innerHTML=text + "is clicked";
+    });
+    
+}
+
+//sound//
+for(var i=0; i<3; i++){
+    document.querySelectorAll(".myButton")[i].addEventListener("click", function(){
+        var text= this.innerHTML;
+        console.log(text);
+        audioPlay(text);
+    });
+}
+
+function audioPlay(text){
+
+    switch(text){
+        case "A":
+            var audio = new Audio('sounds/A.mp3');
+            audio.play();
+            break;
+        case "B":
+            var audio = new Audio('sounds/B.mp3');
+            audio.play();
+            break;
+        case "C":
+            var audio = new Audio('sounds/C.mp3');
+            audio.play();
+            break;
+
+
+    }
+
+}
+
+//animation//
+
+for(var i=0; i<3; i++){
+    document.querySelectorAll(".myButton")[i].addEventListener("click", function(){
+        var text= this.innerHTML;
+        console.log(text);
+        audioPlay(text);
+        playAnimation(text);
+    });
+}
+
+document.addEventListener("keypress", function(event){
+
+    var text= event.key;
+    audioPlay(text);
+    playAnimation(text);
+})
+
+function audioPlay(text){
+
+    switch(text){
+        case "a":
+            var audio = new Audio('sounds/A.mp3');
+            audio.play();
+            break;
+        case "b":
+            var audio = new Audio('sounds/B.mp3');
+            audio.play();
+            break;
+        case "c":
+            var audio = new Audio('sounds/C.mp3');
+            audio.play();
+            break;
+
+
+    }
+
+}
+
+function playAnimation(text){
+
+    var selectedButton= document.querySelector("."+text);
+    selectedButton.classList.add("anim");
+
+    setTimeout(function(){
+        selectedButton.classList.remove("anim");
+    }, 1000);
+}
 
 
 
