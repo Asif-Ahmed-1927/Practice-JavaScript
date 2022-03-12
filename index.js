@@ -416,7 +416,7 @@ for(var i=0; i<3; i++){
     });
 }
 
-function audioPlay(text){
+//function audioPlay(text){
 
     switch(text){
         case "A":
@@ -486,8 +486,51 @@ function playAnimation(text){
     }, 1000);
 }
 
+///submit//
+
+const form= document.querySelector("form");
+const name= form.querySelector("div #name");
+const email= form.querySelector("div #email");
+const password= form.querySelector("div #password");
 
 
+form.addEventListener("submit", formHandler);
 
+function formHandler(e){
+    e.preventDefault();
+    
+    const userInfo= {
+        name:name.value,
+        email: email.value,
+        password: password.value,
+    };
 
+    console.log(userInfo);
+    name.value="";
+    email.value="";
+    password.value="";
+}
+
+//video event//
+
+const video= document.querySelector("video");
+video.addEventListener("canPlay", function(){
+    console.log("canplay");
+})
+video.addEventListener("play", function(){
+    console.log("play");
+})
+video.addEventListener("playing", function(){
+    console.log("playing");
+})
+video.addEventListener("pause", function(){
+    console.log("pause");
+})
+video.addEventListener("ended", function(){
+    console.log("Thanks for watching");
+})
+
+video.addEventListener("volumechange", function(){
+    console.log("volumechange");
+})
 
