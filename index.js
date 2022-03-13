@@ -532,5 +532,4 @@ video.addEventListener("ended", function(){
 
 video.addEventListener("volumechange", function(){
     console.log("volumechange");
-})
-
+}) 
